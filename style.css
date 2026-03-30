@@ -460,6 +460,119 @@ nav {
     margin-bottom: 0.5rem;
 }
 
+/* Legal Page Tabs */
+.legal-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0;
+}
+
+.legal-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.legal-tab:hover {
+    color: var(--text-main);
+}
+
+.legal-tab.active {
+    color: var(--accent-1);
+}
+
+.legal-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    border-radius: 2px 2px 0 0;
+}
+
+.legal-content {
+    display: none;
+    animation: fadeInContent 0.3s ease;
+}
+
+.legal-content.active {
+    display: block;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.eula-intro {
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 3px solid var(--accent-1);
+    padding: 1.5rem;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 2rem;
+}
+
+.eula-intro p {
+    margin-bottom: 0;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.legal-emphasis {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: var(--text-muted);
+}
+
+.eula-source {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.eula-source p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.text-content a {
+    color: var(--accent-1);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.text-content a:hover {
+    color: var(--accent-2);
+    text-decoration: underline;
+}
+
 /* Contact Page */
 .contact-container {
     display: grid;
